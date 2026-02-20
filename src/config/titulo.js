@@ -1,1 +1,2 @@
-module.exports = 'Ecored Base PKG'
+module.exports =
+  'Normatividad, formalización de empresa, documentos e informes contables'

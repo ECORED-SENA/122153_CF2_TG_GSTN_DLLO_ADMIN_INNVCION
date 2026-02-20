@@ -1,17 +1,27 @@
 export default {
   global: {
-    Name: 'Nombre del recurso educativo',
-    Description: 'Descripción del RED',
-    imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.svg'),
-    fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
+    componenteFormativo:
+      'Normatividad, formalización de empresa, documentos e informes contables',
+    descripcionCurso:
+      'Para entender un informe contable, es importante reconocer a la empresa como esa unidad organizada donde se realizan operaciones que son registradas y soportadas con base en una normatividad vigente y que acepta generar informes para sus usuarios, exponiendo las ganancias o pérdidas, lo que permite el acceso a la toma de decisiones financieras a corto, mediano o largo plazo.',
+    imagenBannerPrincipal: require('@/assets/curso/portada/img-intro.png'),
+    fondoBannerPrincipal: require('@/assets/curso/portada/img-fondo.png'),
     imagenesDecorativasBanner: [
       {
         clases: ['banner-principal-decorativo-1', 'd-none', 'd-lg-block'],
-        imagen: require('@/assets/curso/portada/banner-principal-decorativo-1.svg'),
+        imagen: require('@/assets/curso/portada/img-f1.svg'),
       },
       {
         clases: ['banner-principal-decorativo-2'],
-        imagen: require('@/assets/curso/portada/banner-principal-decorativo-2.svg'),
+        imagen: require('@/assets/curso/portada/img-f2.svg'),
+      },
+      {
+        clases: ['banner-principal-decorativo-3'],
+        imagen: require('@/assets/curso/portada/img-f3.svg'),
+      },
+      {
+        clases: ['banner-principal-decorativo-4'],
+        imagen: require('@/assets/curso/portada/img-f4.svg'),
       },
     ],
   },
@@ -19,39 +29,94 @@ export default {
     menu: [
       {
         nombreRuta: 'inicio',
-        icono: 'fas fa-home',
         titulo: 'Volver al inicio',
       },
       {
         nombreRuta: 'introduccion',
-        icono: 'fas fa-info-circle',
         titulo: 'Introducción',
         desarrolloContenidos: true,
       },
       {
         nombreRuta: 'tema1',
         numero: '1',
-        titulo: 'Tema 1',
+        titulo: 'Aspectos generales de la contabilidad',
         desarrolloContenidos: true,
         subMenu: [
           {
             numero: '1.1',
-            titulo: 'Subtema 1',
+            titulo: ' La contabilidad y su clasificación',
             hash: 't_1_1',
+          },
+          {
+            numero: '1.2',
+            titulo: ' La empresa en Colombia',
+            hash: 't_1_2',
+          },
+          {
+            numero: '1.3',
+            titulo: 'La información contable',
+            hash: 't_1_3',
           },
         ],
       },
-
       {
         nombreRuta: 'tema2',
         numero: '2',
-        titulo: 'Tema 2',
+        titulo: 'Documentos y libros contables',
         desarrolloContenidos: true,
+        subMenu: [
+          {
+            numero: '2.1',
+            titulo: 'Documentos contables',
+            hash: 't_2_1',
+          },
+          {
+            numero: '2.2',
+            titulo: 'Libros contables',
+            hash: 't_2_2',
+          },
+          {
+            numero: '2.3',
+            titulo: 'Títulos valores',
+            hash: 't_2_3',
+          },
+        ],
       },
       {
         nombreRuta: 'tema3',
         numero: '3',
-        titulo: 'Tema 3',
+        titulo: 'Proceso administrativo',
+        desarrolloContenidos: true,
+        subMenu: [
+          {
+            numero: '3.1',
+            titulo:
+              'Principios básicos de áreas funcionales, planeación estratégica, organización, dirección y control',
+            hash: 't_3_1',
+          },
+          {
+            numero: '3.2',
+            titulo: 'Archivo y conservación de documentos',
+            hash: 't_3_2',
+          },
+        ],
+      },
+      {
+        nombreRuta: 'tema4',
+        numero: '4',
+        titulo: 'Hechos contables – transacciones de las empresas',
+        desarrolloContenidos: true,
+      },
+      {
+        nombreRuta: 'tema5',
+        numero: '5',
+        titulo: 'Obligaciones tributarias de las empresas',
+        desarrolloContenidos: true,
+      },
+      {
+        nombreRuta: 'tema6',
+        numero: '6',
+        titulo: 'Informes contables y estados financieros',
         desarrolloContenidos: true,
       },
     ],
@@ -86,7 +151,7 @@ export default {
       {
         icono: 'fas fa-file-pdf',
         titulo: 'Descargar PDF',
-        download: 'downloads/dist.pdf',
+        download: 'downloads/122153_CF02_DU.zip',
       },
       {
         icono: 'fas fa-download',
@@ -100,92 +165,268 @@ export default {
       },
     ],
   },
-  complementario: [
+  referencias: [
     {
-      tema: '',
-      referencia: '',
-      tipo: 'Sitio web',
-      link: '',
+      referencia:
+        'Decreto 2420 de 2015. (Presidencia de la República). Por medio de la cual se expide el Decreto Único Reglamentario de las Normas de Contabilidad, de Información Financiera y de Aseguramiento de la Información y se dictan otras disposiciones. Diciembre 14 de 2015.',
+    },
+    {
+      referencia:
+        'Hernández, S. J. (2011). <em>Introducción a la administración</em> (5.a ed., Vol. 1). McGraw-Hill Interamericana.',
+    },
+    {
+      referencia:
+        'Ley 590 de 2000. Por la cual se dictan disposiciones para promover el desarrollo de las micro, pequeñas y medianas empresa. Julio 10 de 2000. DO. No. 44.078',
+    },
+    {
+      referencia:
+        'Secretaría Senado. (1971).<em> Código de Comercio Decreto 410 de 1971.</em>',
+      link:
+        'http://www.secretariasenado.gov.co/senado/basedoc/decreto_2650_2008.html',
+    },
+    {
+      referencia:
+        'Sistema de Información sobre Comercio Exterior. (s.f.).<em> Comisión de la Comunidad Andina.</em> Decisión 486: Régimen Común sobre Propiedad Industrial. SICE OAS.',
+      link: 'http://www.sice.oas.org/trade/junac/decisiones/dec486s6.asp',
+    },
+    {
+      referencia:
+        'Uribe Medina, L. R. (2016). <em>Plan de cuentas para sistemas contables.</em>',
+      link: 'https://docplayer.es/33172203-Luis-raul-uribe-medina.html',
+    },
+    {
+      referencia:
+        'Zapata, P. (2018).<em> Contabilidad General.</em> (8ª Ed.). Alfaomega.',
+      link:
+        'https://www.alphaeditorialcloud.com/reader/contabilidad-general?location=22',
     },
   ],
   glosario: [
     {
-      termino: 'Término',
-      significado: 'Definición',
+      termino: 'Comerciante',
+      significado:
+        'persona que ejerce alguna de las actividades que se consideran mercantiles.',
+    },
+    {
+      termino: 'Costo histórico',
+      significado: 'es el valor de la transacción de una operación.',
+    },
+    {
+      termino: 'Contribuyente',
+      significado:
+        'se refiere a toda persona natural o jurídica llamada para cumplir ciertas obligaciones tributarias, por la realización del hecho generador establecido en la ley para el nacimiento del tributo.',
+    },
+    {
+      termino: 'Debe',
+      significado: 'registra el valor monetario al lado izquierdo.',
+    },
+    {
+      termino: 'Declarante',
+      significado:
+        'persona natural o jurídica que presenta una declaración tributaria.',
+    },
+    {
+      termino: 'Empresa',
+      significado:
+        'ente económico dedicado a la compra y venta de bienes, conocidos como mercancías.',
+    },
+    {
+      termino: 'Estado de resultados',
+      significado:
+        'estado financiero compuesto por las cuentas de ingresos, gastos y costos, los cuales reflejan el resultado del ejercicio.',
+    },
+    {
+      termino: 'Estado de situación financiera',
+      significado:
+        'estado integrado por los elementos de activo, pasivo y patrimonio.',
+    },
+    {
+      termino: 'Haber',
+      significado: 'corresponde al registro del precio al lado derecho.',
+    },
+    {
+      termino: 'Hecho generador',
+      significado:
+        'es el evento o suceso, expresamente definido en la ley, por el cual se origina la obligación tributaria.',
+    },
+    {
+      termino: 'Impuesto',
+      significado:
+        'es el tributo que establece la ley a favor del sujeto activo, y a cargo de los sujetos a quienes se les atribuya la realización del hecho imponible de la obligación tributaria.',
+    },
+    {
+      termino: 'Normas básicas',
+      significado:
+        'conceptos básicos y reglas que se deben observar al efectuar los registros contables correspondientes a las actividades que desarrollan las personas jurídicas o naturales, y que deben aplicar todas las personas obligadas a llevar contabilidad.',
+    },
+    {
+      termino: 'Nota débito',
+      significado:
+        'comprobante que emiten las empresas, para cargar a la cuenta de los clientes, valores como intereses por financiación, por sobregiros, el gravamen a movimientos financieros (GMF), venta de chequeras, comisiones, y otros cobros',
+    },
+    {
+      termino: 'Partida doble',
+      significado:
+        'es la igualdad de los registros del debe y el haber en el asiento contable, presentando un equilibrio.',
+    },
+    {
+      termino: 'Patrimonio',
+      significado: 'es la diferencia presentada entre activo y pasivo.',
+    },
+    {
+      termino: 'Políticas contables',
+      significado:
+        'son las bases, reglas y procedimientos aplicables por una empresa, para presentar los estados financieros.',
+    },
+    {
+      termino: 'Razón comercial',
+      significado:
+        'es el nombre que se asigna a la empresa, para darse a conocer ante el público o mercado.',
+    },
+    {
+      termino: 'Razón social',
+      significado:
+        'es el nombre de la empresa, que se encuentra registrado en la cámara de comercio y demás entidades de control.',
+    },
+    {
+      termino: 'Registro Único Tributario (RUT)',
+      significado:
+        'es el documento que se tramita ente la Dirección de Impuestos y Aduanas Nacionales (DIAN), el cual relaciona la clasificación y responsabilidades del contribuyente.',
+    },
+    {
+      termino: 'Sujeto activo',
+      significado:
+        'es el Estado como acreedor de la prestación pecuniaria que se deriva de la realización del hecho generador del tributo.',
+    },
+    {
+      termino: 'Sujeto pasivo',
+      significado:
+        'es aquél a quien se le atribuye la realización del hecho impositivo de la obligación tributaria.',
+    },
+    {
+      termino: 'Tarifa',
+      significado:
+        'es la unidad de medida o porcentaje que se aplica a la base gravable para determinar la cuantía del tributo.',
     },
   ],
-  referencias: [
+  complementario: [
     {
-      referencia: '',
-      link: '',
+      tema: 'La información contable',
+      referencia:
+        'IFRS Foundation. (s.f.). <i>Norma Internacional de Contabilidad 8. Políticas Contables, Cambios en las Estimaciones Contables y Errores.</i>',
+      tipo: 'PDF',
+      link:
+        'https://www.ctcp.gov.co/proyectos/contabilidad-e-informacion-financiera/documentos-organismos-internacionales/compilacion-marcos-tecnicos-de-informacion-financi/1534369239-2962',
+    },
+    {
+      tema: 'Documentos contables',
+      referencia:
+        'DIAN. (s.f.). <i>Documento soporte de pago en adquisiciones efectuadas a sujetos no obligados a expedir factura de venta o documento equivalente</i>',
+      tipo: 'PDF',
+      link:
+        'https://www.dian.gov.co/impuestos/Documents/Documento_soporte_en_adquisiciones_efectuadas.pdf',
+    },
+    {
+      tema: 'Documentos contables',
+      referencia:
+        'Resolución 0167 de 2021. (DIAN). Por la cual se implementa y desarrolla en el sistema de facturación electrónica la funcionalidad del documento soporte en adquisiciones efectuadas a sujetos no obligados a expedir factura de venta o documento equivalente, para su transmisión electrónica y se expide el anexo técnico del documento. Diciembre 30 de 2021.',
+      tipo: 'PDF',
+      link:
+        'https://www.dian.gov.co/normatividad/Normatividad/Resoluci%C3%B3n%20000167%20de%2030-12-2021.pdf',
+    },
+    {
+      tema: 'Archivo y conservación de documentos',
+      referencia:
+        'PROING – SA OFICIAL. (2017). <i>Organización y archivo de documentos – Gestión documental</i> (video). YouTube.',
+      tipo: 'Video',
+      link: 'https://www.youtube.com/watch?v=DGRZsfzGE9Y',
     },
   ],
-  creditos: [
-    {
-      titulo: 'ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable del ecosistema',
-          centro: 'Dirección General',
-        },
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable de línea de producción',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'CONTENIDO INSTRUCCIONAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Nombre del rol',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'DISEÑO Y DESARROLLO DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Diseñador de contenidos',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Desarrollador <i>full stack</i>',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Animador y productor audiovisual',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'VALIDACIÓN RECURSO EDUCATIVO DIGITAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Validador y vinculador de recursos educativos digitales',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Evaluador de contenidos inclusivos y accesibles',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-  ],
-  creditosAdicionales: {
-    imagenes:
-      'Fotografías y vectores tomados de <a href="https://www.freepik.es/" target="_blank">www.freepik.es</a>, <a href="https://www.shutterstock.com/" target="_blank">www.shutterstock.com</a>, <a href="https://unsplash.com/" target="_blank">unsplash.com </a>y <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>',
-    creativeCommons:
-      'Licencia creative commons CC BY-NC-SA<br><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">ver licencia</a>',
+  creditos: {
+    liderEquipo: [
+      {
+        nombre: 'Maria Camila Garcia Santamaria',
+        cargo: 'Líder del equipo',
+        centro: 'Dirección General',
+      },
+    ],
+    contenidoInstruccional: [
+      {
+        nombre: 'Rafael Neftalí Lizcano Reyes',
+        cargo: 'Asesor metodológico y pedagógico',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    desarrolloProducto: [
+      {
+        nombre: 'Francisco José Lizcano Reyes',
+        cargo: 'Responsable del equipo',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Diseño web',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Producción audiovisual',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Desarrollo front-end',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Validación de diseño y contenido',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    gestoresRepositorio: [
+      {
+        nombre: 'Álvaro Andrés Angarita Ramirez',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Daniel Felipe Varón Molina',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Milady Tatiana Villamil Castellanos',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+    ],
   },
+  // creditosInicio: [
+  //   {
+  //     titulo: 'En alianza',
+  //     contenido: [
+  //       require('@/assets/template/logo-sena-naranja.svg'),
+  //       require('@/assets/template/mintic.jpg'),
+  //       require('@/assets/template/minsalud.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'En compañía',
+  //     contenido: [
+  //       require('@/assets/template/presidencia.jpg'),
+  //       require('@/assets/template/ecopetrol.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'Una iniciativa',
+  //     contenido: [require('@/assets/template/santander.jpg')],
+  //   },
+  // ],
 }
